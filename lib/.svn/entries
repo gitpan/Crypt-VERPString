@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="263"
+   name=""
+   committed-date="2005-07-07T23:03:50.746375Z"
+   url="http://cvs.gfed.net/svn/source/perl/Crypt-VERPString/trunk/lib"
+   last-author="dorian"
+   kind="dir"
+   revision="263"/>
+<entry
+   name="Crypt"
+   kind="dir"/>
+</wc-entries>
