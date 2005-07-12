@@ -4,7 +4,8 @@ use warnings FATAL => 'all';
 use strict;
 
 use Carp         qw(croak);
-use MIME::Base32 qw(rfc);
+#use MIME::Base32 qw(rfc);
+use MIME::Base32 qw(crockford);
 use Crypt::CBC   ();
 
 =head1 NAME
@@ -13,11 +14,11 @@ Crypt::VERPString - Encrypt and encode fixed-length records for VERP
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -114,10 +115,11 @@ sub new {
 sub _get_cipher {
     my ($self, $iv) = @_;
     Crypt::CBC->new({
-        key         => $self->{key},
-        cipher      => $self->{cipher},
-        iv          => pack('NN', $iv, 0), # i'm sure we could use more entropy
-        prepend_iv  => 0,
+        key             => $self->{key},
+        cipher          => $self->{cipher},
+        iv              => pack('NN', $iv, 0), # we could use more entropy...
+        regenerate_key  => 0,
+        prepend_iv      => 0,
     });
 }
 
@@ -194,7 +196,7 @@ be notified of progress on your bug as I make changes.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2005 dorian taylor, All Rights Reserved.
+Copyright 2005 iCrystal Software, Inc., All Rights Reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

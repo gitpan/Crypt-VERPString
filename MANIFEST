@@ -1,26 +1,11 @@
 Changes
 MANIFEST
 MANIFEST.SKIP
+META.yml
 Makefile.PL
 README
 lib/Crypt/VERPString.pm
-lib/Crypt/.svn/entries
-lib/Crypt/.svn/empty-file
-lib/Crypt/.svn/README.txt
-lib/Crypt/.svn/format
-lib/Crypt/.svn/dir-wcprops
-lib/.svn/entries
-lib/.svn/empty-file
-lib/.svn/README.txt
-lib/.svn/format
-lib/.svn/dir-wcprops
 t/pod-coverage.t
 t/00.load.t
 t/pod.t
-t/.svn/entries
-t/.svn/empty-file
-t/.svn/README.txt
-t/.svn/format
-t/.svn/dir-wcprops
 t/does-it-work.t
-META.yml                                 Module meta-data (added by MakeMaker)
